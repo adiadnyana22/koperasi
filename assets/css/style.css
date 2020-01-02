@@ -1,0 +1,146 @@
+@font-face{
+    font-family: Poppins;
+    src: url(../font/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+
+/* Common */
+.wrapper{
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+
+/* Login Page */
+.bg-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #17b978, #38ef7d);
+}
+
+.login{
+    width: 80%;
+    background-color: #fdfdfd;
+    display: flex;
+    box-shadow: 8px 8px 3px rgb(23, 186, 121, 0.8), -8px -8px 3px rgb(56, 239, 125, 0.8);
+}
+
+.gb-login{
+    max-width: 40%;
+    /* width: 40%; */
+    padding: 0px 6%;
+    background-color: rgb(56, 239, 125, 0.4);
+    display: block;
+}
+
+.gb-login img{
+    width: 100%;
+}
+
+.ts-login{
+    padding: 5% 8%;
+    max-width: 60%;
+    width: 60%;
+    margin: auto;
+}
+
+.ts-login h1{
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.ts-login form label{
+    width: 100%;
+    display: block;
+    font-size: 18px;
+}
+
+.ts-login form label input{
+    width: 80%;
+    max-width: 100%;
+    margin: 10px 0 20px;
+    padding: 10px 10%;
+}
+
+.ts-login form button{
+    width: 101%;
+    margin: 10px 0;
+    padding: 10px 0;
+    color: #fff;
+    background-color: rgb(23, 185, 120);
+    border-radius: 5px;
+    border: 1px solid #17b978;
+    transition: .5s;
+}
+
+.ts-login form button:hover{
+    background-color: transparent;
+    color: #1e1e1e;
+}
+
+.ts-login a{
+    color: #555;
+}
+
+@media(max-width: 1200px){
+    .gb-login{
+        display: none;
+    }
+}
+
+
+/* Panel Page */
+.bg-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #17b978ee;
+}
+
+.bg-head h3{
+    display: inline;
+    padding: 5px;
+}
+
+.bg-head img{
+    width: 30px;
+}
+
+.bg-panel{
+    display: flex;
+}
+
+.bg-nav{
+    width: 30%;
+    text-align: center;
+    background-color: #17b978;
+}
+
+.bg-nav nav ul li{
+    list-style: none;
+}
+
+.bg-nav nav ul li a{
+    color: #1e1e1e;
+    background-color: #38ef7d;
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    border-bottom: 1px #17b978 solid;
+}
+
+.bg-isi{
+    padding: 3%;
+}
