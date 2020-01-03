@@ -101,44 +101,61 @@
 
 
 /* Panel Page */
-.bg-head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #17b978ee;
+.navigasi{
+    background-color: #1e1e1e;
+    height: 100vh;
+    color: white;
 }
 
-.bg-head h3{
-    display: inline;
-    padding: 5px;
-}
-
-.bg-head img{
-    width: 30px;
-}
-
-.bg-panel{
-    display: flex;
-}
-
-.bg-nav{
-    width: 30%;
-    text-align: center;
+.logo{
+    padding: 20px;
     background-color: #17b978;
 }
 
-.bg-nav nav ul li{
-    list-style: none;
+nav{
+    /* margin-top: 20px; */
 }
 
-.bg-nav nav ul li a{
-    color: #1e1e1e;
-    background-color: #38ef7d;
-    display: block;
-    padding: 12px 0;
+nav ul li{
+    list-style: none;
+    /* text-align: center; */
+}
+
+nav ul li hr{
+    border: 1px solid #333;
+    width: 90%;
+    /* float: right; */
+    background-color: #333;
+    /* margin-left: 10px; */
+}
+
+nav ul li a{
+    color: #ececec;
     text-decoration: none;
-    border-bottom: 1px #17b978 solid;
+    display: block;
+    padding: 15px 20px;
+}
+
+.bg-head{
+    background-color: #38ef7d;
+}
+
+.user{
+    padding: 14px 20px;
+    /* float: right; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.user img{
+    width: 60px;
+    /* padding: 20px; */
+}
+
+.user h2{
+    display: inline;
+    padding: 0px 10px;
 }
 
 .bg-isi{
