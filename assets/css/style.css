@@ -138,6 +138,7 @@ nav ul li a{
 
 .bg-head{
     background-color: #38ef7d;
+    /* float: right; */
 }
 
 .user{
@@ -162,6 +163,7 @@ nav ul li a{
     padding: 3%;
     background-color: #ececec;
     height: 78vh;
+    /* position: fixed; */
 }
 
 .isi{
