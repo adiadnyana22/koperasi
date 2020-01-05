@@ -1,9 +1,79 @@
-<div class="container-fluid">
-	<div class="jumbotron mt-4">
-		<h1 class="display-4">Selamat Datang di Website Saya!</h1>
-		<p class="lead">Halo, nama saya <?= $data['nama'] ?></p>
-		<hr class="my-4">
-		<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<?= BASEURL ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= BASEURL ?>/assets/css/grid.css">
+    <title><?= $data['judul'] ?></title>
+</head>
+<body>
+    <div class="wrapper" style="background-color: #1e1e1e;">
+        <div class="row">
+            <div class="col-lg-2 col-sm-12">
+                <div class="navigasi">
+                    <div class="logo">
+                        <center><h1>LOGO</h1></center>
+                    </div><!-- Penutup Logo -->
+                    <nav>
+                        <ul>
+                            <li><a href="">Tambah Anggota</a><hr></li>
+                            <li><a href="">Tambah Petugas</a><hr></li>
+                            <li><a href="">Tambah Simpanan</a><hr></li>
+                            <li><a href="">Tambah Pinjaman</a><hr></li>
+                            <li><a href="">Tambah Angsuran</a><hr></li>
+                            <li><a href="">Tampil Anggota</a><hr></li>
+                            <li><a href="">Tampil Petugas</a><hr></li>
+                            <li><a href="">Tampil Simpanan</a><hr></li>
+                            <li><a href="">Tampil Pinjaman</a><hr></li>
+                            <li><a href="">Tampil Angsuran</a><hr></li>
+                        </ul>
+                    </nav>
+                </div><!-- Penutup Navigasi -->
+            </div><!-- Penutup Col -->
+            <div class="col-lg-10 col-sm-12">
+                <div class="bg-head">
+                    <div class="user">
+                        <h2>Admin</h2>
+                        <img src="../../assets/img/user.png" alt="">
+                    </div><!-- Penutup User -->
+                </div><!-- Penutup Bg-Head -->
+                <div class="bg-isi">
+                    <h1>Tambah Anggota</h1>
+                    <div class="isi">
+                        <form action="<?= BASEURL ?>/home/tambah" method="POST">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="">Nama :
+                                        <input type="text" name="nama" placeholder="Nama ...">
+                                    </label>
+                                    <label for="">Tanggal Lahir :
+                                        <input type="date" name="tgl_lahir">
+                                    </label>
+                                    <label for="">Tempat Lahir :
+                                        <input type="text" name="tmpt_lahir" placeholder="Tempat Lahir ...">
+                                    </label>
+                                    <label for="">Jenis Kelamin : <br>
+                                        <input name="jenis_kelamin" type="radio"  value="Pria" class="radio"> Pria <br>
+                                        <input name="jenis_kelamin" type="radio"  value="Wanita" class="radio"> Wanita <br>
+                                    </label>
+                                </div><!-- Penutup Col -->
+                                <div class="col-lg-6 col-sm-12">
+                                    <label for="">No. Handphone :
+                                        <input type="text" placeholder="No. Handphone ..." name="no_hp">
+                                    </label>
+                                    <label for="">Keterangan :
+                                        <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Keterangan ..."></textarea>
+                                    </label>
+                                    <button class="btn-form">Sumbit</button>
+                                </div>
+                            </div><!-- Penutup Row -->
+                        </form>
+                    </div><!-- Penutup Isi -->
+                </div><!-- Penutup Bg-Isi -->
+            </div><!-- Penutup Col -->
+        </div><!-- Penutup Row -->
+    </div><!-- Penutup Wrapper -->
+</body>
+</html>

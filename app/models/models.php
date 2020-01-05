@@ -1,22 +1,87 @@
 <?php
-    require_once 'app/config/config.php';
-    class models extends connect{
-        public function __construct() {
-            parent::__construct();
-        }
-        public function selectAll($table){
-            $select = $this->pdo->prepare("SELECT * FROM $table");
-            $select->execute();
-            return $select;
-        }
-        public function selectById($table,$idDB,$idGet){
-            $select = $this->pdo->prepare("SELECT * FROM $table WHERE $idDB = $idGet");
-            $select->execute();
-            return $select;
-        }
-        public function deleteById($table,$idDB,$idGet){
-            $delete = $this->pdo->prepare("DELETE FROM $table WHERE $idDB = $idGet");
-            $delete->execute();
-        }
-    }
-   
+
+class models {
+	private $table = 'anggota';
+	private $db;
+
+	public function __construct()
+	{
+		$this->db = new Database;
+	}
+
+	public function getAllSiswa()
+	{
+		$this->db->query('SELECT * FROM ' . $this->table);
+		return $this->db->resultSet();
+	}
+
+	public function getSiswaById($id)
+	{
+		$this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+		$this->db->bind('id', $id);
+		return $this->db->single();
+	}
+
+	public function tambahDataSiswa($data)
+	{
+		$nama = htmlspecialchars($data['nama']);
+		$lahir = htmlspecialchars($data['tgl_lahir']);
+		$tempat = htmlspecialchars($data['tmpt_lahir']);
+        $jenis = htmlspecialchars($data['jenis_kelamin']);
+        $hp = htmlspecialchars($data['no_hp']);
+        $light = htmlspecialchars($data['keterangan']);
+
+		$query = "INSERT INTO anggota VALUES (NULL, :nama, :tgl_lahir, :tmpt_lahir, :jenis_kelamin, :no_hp, :keterangan)";
+		$this->db->query($query);
+		$this->db->bind('nama', $nama);
+		$this->db->bind('tgl_lahir', $lahir);
+		$this->db->bind('tmpt_lahir', $tempat);
+        $this->db->bind('jenis_kelamin', $jenis);
+        $this->db->bind('no_hp', $hp);
+        $this->db->bind('keterangan', $light);
+
+		$this->db->execute();
+
+		return $this->db->rowCount();
+	}
+
+	public function hapusDataSiswa($id)
+	{
+		$query = "DELETE FROM siswa WHERE id = :id";
+		$this->db->query($query);
+		$this->db->bind('id',$id);
+
+		$this->db->execute();
+
+		return $this->db->rowCount();
+	}
+
+	public function ubahDataSiswa($data)
+	{
+		$query = "UPDATE siswa SET
+					nama = :nama,
+					nis = :nis,
+					email = :email,
+					jurusan = :jurusan
+					WHERE id = :id";
+		$this->db->query($query);
+		$this->db->bind('nama', $data['nama']);
+		$this->db->bind('nis', $data['nis']);
+		$this->db->bind('email', $data['email']);
+		$this->db->bind('jurusan', $data['jurusan']);
+		$this->db->bind('id', $data['id']);
+
+		$this->db->execute();
+
+		return $this->db->rowCount();
+	}
+
+	public function cariDataSiswa()
+	{
+		$keyword = $_POST['keyword'];
+		$query = "SELECT * FROM siswa WHERE nama LIKE :keyword";
+		$this->db->query($query);
+		$this->db->bind('keyword', "%$keyword%");
+		return $this->db->resultSet();
+	}
+}

@@ -1,7 +1,7 @@
 <?php
     require_once 'app/models/models.php';
     class Anggota extends models{
-        public function __construtct(){
+        public function __construct(){
             parent::__construct();
         }
         public function add($table,$values){

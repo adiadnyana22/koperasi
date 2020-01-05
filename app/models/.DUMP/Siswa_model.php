@@ -29,7 +29,7 @@ class Siswa_model {
 		$email = htmlspecialchars($data['email']);
 		$jurusan = htmlspecialchars($data['jurusan']);
 
-		$query = "INSERT INTO siswa VALUES ('', :nama, :nis, :email, :jurusan)";
+		$query = "INSERT INTO siswa VALUES (NULL, :nama, :nis, :email, :jurusan)";
 		$this->db->query($query);
 		$this->db->bind('nama', $nama);
 		$this->db->bind('nis', $nis);
