@@ -40,13 +40,17 @@
                     </div><!-- Penutup User -->
                 </div><!-- Penutup Bg-Head -->
                 <div class="bg-isi">
-                    <h1>Tambah Simpanan</h1>
+                    <h1>Tambah Angsuran</h1>
                     <div class="isi">
                         <form action="">
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12">
-                                    <label for="">Nama Simpanan :
-                                        <input type="text" placeholder="Nama Simpanan ...">
+                                    <label for="">Id Kategori Pinjaman:
+                                        <select name="" id="">
+                                            <option value="1">Pinjaman 12 Bulan</option>
+                                            <option value="2">Pinjaman 24 Bulan</option>
+                                            <option value="3">Pinjaman 36 Bulan</option>
+                                        </select>
                                     </label>
                                     <label for="">Id Anggota :
                                         <select name="" id="">
@@ -56,11 +60,21 @@
                                             <option value="4">...</option>
                                         </select>
                                     </label>
-                                    <label for="">Besar Simpanan :
-                                        <input type="number" placeholder="Besar Simpanan ...">
+                                    <label for="">Tanggal Pembayaran :
+                                        <input type="date">
+                                    </label>
+                                    <label for="">Angsuran Ke - :
+                                        <select name="" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">...</option>
+                                        </select>
                                     </label>
                                 </div><!-- Penutup Col -->
                                 <div class="col-lg-6 col-sm-12">
+                                    <label for="">Besar Angsuran :
+                                        <input type="number" placeholder="Besar Angsuran">
+                                    </label>
                                     <label for="">Keterangan :
                                         <textarea name="" id="" cols="30" rows="9" placeholder="Keterangan ..."></textarea>
                                     </label>
