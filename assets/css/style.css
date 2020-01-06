@@ -178,9 +178,13 @@ nav ul li a{
     padding: 5px 0;
 }
 
-.isi input, .isi textarea{
+.isi input, .isi textarea, .isi select{
     width: 90%;
     padding: 10px 20px;
+}
+
+.isi select{
+    width: 97.5%;
 }
 
 .isi .radio{
