@@ -1,10 +1,10 @@
 <?php
 
-class Home extends Controller {
+class Tambah_Anggota extends Controller {
 	public function index()
 	{
 		$data['judul'] = 'Admin Panel';
-		$this->view('home/index', $data);
+		$this->view('Tambah_Anggota/index', $data);
 	}
 	public function tambah()
 	{
