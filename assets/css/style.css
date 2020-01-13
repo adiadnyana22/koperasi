@@ -209,9 +209,21 @@ nav ul li a{
 
 table{
     width: 100%;
+    border-collapse: collapse;
+    background-color: #fafafa;
+}
+
+tr th{
+    background-color: #17b978;
+    padding: 15px 2%;
+    color: white;
 }
 
 td{
     text-align: center;
     padding: 15px 2%;
+}
+
+tr:nth-child(even) {
+    background-color: #38ef7d;
 }
