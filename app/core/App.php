@@ -1,7 +1,7 @@
 <?php
 
 class App {
-	protected $controller = 'Home';
+	protected $controller = 'Tambah_Anggota'; //base routing name
 	protected $method = 'index';
 	protected $params = [];
 
