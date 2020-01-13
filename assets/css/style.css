@@ -206,3 +206,12 @@ nav ul li a{
     color: #1e1e1e;
     padding: 10px 40px;
 }
+
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    padding: 15px 2%;
+}
