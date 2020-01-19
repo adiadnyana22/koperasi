@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<?= BASEURL ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?= BASEURL ?>/assets/css/grid.css">
-    <title><?= $data['judul'] ?></title>
+    <title>Panel</title>
 </head>
 <body>
     <div class="wrapper" style="background-color: #1e1e1e;">
@@ -36,35 +36,38 @@
                 <div class="bg-head">
                     <div class="user">
                         <h2>Admin</h2>
-                        <img src="../../assets/img/user.png" alt="">
+                        <img src="<?= BASEURL ?>/assets/img/user.png" alt="">
                     </div><!-- Penutup User -->
                 </div><!-- Penutup Bg-Head -->
                 <div class="bg-isi">
                     <h1>Tambah Anggota</h1>
                     <div class="isi">
-                        <form action="<?= BASEURL ?>/home/tambah" method="POST">
+                        <form action="">
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="">Nama :
                                         <input type="text" name="nama" placeholder="Nama ...">
                                     </label>
+                                    <label for="">Alamat :
+                                        <input type="text" name="alamat" placeholder="Alamat ...">
+                                    </label>
                                     <label for="">Tanggal Lahir :
                                         <input type="date" name="tgl_lahir">
                                     </label>
                                     <label for="">Tempat Lahir :
-                                        <input type="text" name="tmpt_lahir" placeholder="Tempat Lahir ...">
+                                        <input type="text" name="tgl_lahir" placeholder="Tempat Lahir ...">
                                     </label>
                                     <label for="">Jenis Kelamin : <br>
-                                        <input name="jenis_kelamin" type="radio"  value="Pria" class="radio"> Pria <br>
-                                        <input name="jenis_kelamin" type="radio"  value="Wanita" class="radio"> Wanita <br>
+                                        <input name="jenis_kelamin" type="radio" name="gender" value="Pria" class="radio"> Pria <br>
+                                        <input name="jenis_kelamin" type="radio" name="gender" value="Wanita" class="radio"> Wanita <br>
                                     </label>
                                 </div><!-- Penutup Col -->
                                 <div class="col-lg-6 col-sm-12">
                                     <label for="">No. Handphone :
-                                        <input type="text" placeholder="No. Handphone ..." name="no_hp">
+                                        <input type="text" name="no_hp" placeholder="No. Handphone ...">
                                     </label>
                                     <label for="">Keterangan :
-                                        <textarea name="keterangan" id="" cols="30" rows="10" placeholder="Keterangan ..."></textarea>
+                                        <textarea name="keterangan" id="" cols="30" rows="9" placeholder="Keterangan ..."></textarea>
                                     </label>
                                     <button class="btn-form">Sumbit</button>
                                 </div>
